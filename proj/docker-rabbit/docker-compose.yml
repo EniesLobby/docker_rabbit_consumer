@@ -1,0 +1,14 @@
+version: '2'
+services:
+  certcheck:
+    build: ./certcheck
+    external_links:
+      - ctlab_ctdatabase_1
+    networks:
+      - default
+      - ctlab_default
+    tty: true
+networks:
+  ctlab_default:
+    external: true
+
